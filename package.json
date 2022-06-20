@@ -1,0 +1,28 @@
+{
+  "name": "@daofresh/env",
+  "version": "1.0.0",
+  "description": "dotenv + envalid",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build"
+  },
+  "keywords": [
+    "dotenv",
+    "envalid"
+  ],
+  "author": "daofresh",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "18.0.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "envalid": "^7.3.1"
+  }
+}
