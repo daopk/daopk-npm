@@ -1,13 +1,19 @@
-import { makeValidator, Spec } from "envalid";
+import { makeValidator, Spec } from 'envalid'
 
-export function arrStr(spec?: Spec<string[]>) {
-  return makeValidator((input) => {
-    return input?.split(",").map((s) => s.trim()) || [];
-  })(spec);
+export function arrStr<T extends string[] = string[]>(spec?: Spec<T>) {
+  return makeValidator<T>((input) => {
+    return (input?.split(',').map((s) => s.trim()) as T) || []
+  })(spec)
 }
 
-export function arrNum(spec?: Spec<number[]>) {
-  return makeValidator((input) => {
-    return input?.split(",").map((s) => Number(s)) || [];
-  })(spec);
+export function arrNum<T extends number[] = number[]>(spec?: Spec<T>) {
+  return makeValidator<T>((input) => {
+    return (input?.split(',').map((s) => Number(s)) as T) || []
+  })(spec)
+}
+
+export function arrBool<T extends boolean[] = boolean[]>(spec?: Spec<T>) {
+  return makeValidator<T>((input) => {
+    return (input?.split(',').map((s) => Boolean(s)) as T) || []
+  })(spec)
 }
