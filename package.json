@@ -17,9 +17,13 @@
   ],
   "author": "daopk",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daopk/daopk-npm.git"
+  },
   "devDependencies": {
-    "@types/node": "18.0.0",
-    "typescript": "^4.9.3"
+    "@types/node": "18.14.2",
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
