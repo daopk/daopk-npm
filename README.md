@@ -1,4 +1,4 @@
-# daopk-npm
+# @daopk/env
 
 [![npm-image]][npm-url]
 
