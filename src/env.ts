@@ -2,7 +2,6 @@ import { join } from 'node:path'
 import { existsSync, readFileSync } from 'node:fs'
 import type { DotenvParseOutput } from 'dotenv'
 import { parse } from 'dotenv'
-import type { ValidatorSpec } from 'envalid'
 import { cleanEnv } from 'envalid'
 
 interface LoadEnvOptions {
@@ -31,13 +30,8 @@ export function loadEnv(opts: LoadEnvOptions = {}) {
   return Object.freeze(env)
 }
 
-export function defineEnv<T>(
-  specs: { [K in keyof T]: ValidatorSpec<T[K]> },
-  options: LoadEnvOptions = {},
-) {
-  return cleanEnv<T>(loadEnv(options), {
-    ...specs,
-  })
+export function defineEnv<T>(specs: T, options: LoadEnvOptions = {}) {
+  return cleanEnv<T>(loadEnv(options), specs)
 }
 
 function parseEnvFile(envFile: string) {
