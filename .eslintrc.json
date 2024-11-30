@@ -1,8 +1,0 @@
-{
-  "extends": [
-    "@daopk/eslint-config-ts"
-  ],
-  "rules": {
-    "n/prefer-global/process": ["error", "always"]
-  }
-}

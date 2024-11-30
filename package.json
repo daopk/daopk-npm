@@ -19,15 +19,13 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build",
-    "lint": "eslint ."
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "dotenv": "^16.3.1",
     "envalid": "^8.0.0"
   },
   "devDependencies": {
-    "@daopk/eslint-config-ts": "^0.5.4",
     "@types/node": "20.11.0",
     "typescript": "^5.3.3"
   }
